@@ -24,6 +24,7 @@
 		F452AFD92645878800D5A9E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F452AFDB2645878800D5A9E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F452AFE32645880900D5A9E9 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		F452AFE62645A3A300D5A9E9 /* In-APP purchase App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "In-APP purchase App.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +57,7 @@
 		F452AFCC2645878600D5A9E9 /* In-APP purchase App */ = {
 			isa = PBXGroup;
 			children = (
+				F452AFE62645A3A300D5A9E9 /* In-APP purchase App.entitlements */,
 				F452AFCD2645878600D5A9E9 /* AppDelegate.swift */,
 				F452AFCF2645878600D5A9E9 /* SceneDelegate.swift */,
 				F452AFD32645878600D5A9E9 /* Main.storyboard */,
@@ -286,6 +288,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "In-APP purchase App/In-APP purchase App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4US5CS8APQ;
 				INFOPLIST_FILE = "In-APP purchase App/Info.plist";
@@ -295,6 +298,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.stevebrains.In-APP-purchase-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -305,6 +309,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "In-APP purchase App/In-APP purchase App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4US5CS8APQ;
 				INFOPLIST_FILE = "In-APP purchase App/Info.plist";
@@ -314,6 +319,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.stevebrains.In-APP-purchase-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

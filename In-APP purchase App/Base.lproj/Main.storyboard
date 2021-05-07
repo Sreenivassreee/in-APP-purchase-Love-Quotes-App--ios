@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="tMg-Jq-pwe">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QCell" id="tMg-Jq-pwe">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tMg-Jq-pwe" id="ao4-2k-gui">
@@ -31,7 +31,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="KhQ-YM-op9">
-                        <barButtonItem key="rightBarButtonItem" title="Restored" id="Db6-MS-iqt"/>
+                        <barButtonItem key="rightBarButtonItem" title="Restored" id="Db6-MS-iqt">
+                            <connections>
+                                <action selector="RestoredPressed:" destination="MJG-gb-pka" id="2Nh-Vy-8Lw"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X8g-7W-e4J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
