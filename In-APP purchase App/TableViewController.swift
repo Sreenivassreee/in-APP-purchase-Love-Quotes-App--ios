@@ -51,6 +51,7 @@ class TableViewController: UITableViewController  {
     
     }
     @IBAction func RestoredPressed(_ sender: UIBarButtonItem) {
+        SKPaymentQueue.default().restoreCompletedTransactions()
     }
     
 
@@ -97,18 +98,25 @@ extension TableViewController:SKPaymentTransactionObserver{
             if t.transactionState == .purchased{
                 print("payment purchased")
                 givePremiumQuotes()
-                UserDefaults.standard.setValue(true, forKey: productID)
+   
+                SKPaymentQueue.default().finishTransaction(t)
             }else if t.transactionState == .failed{
-    
+ 
                 if let error=t.error{
                     print("payment Failed")
                     print(error.localizedDescription)
-                    
+                    SKPaymentQueue.default().finishTransaction(t)
                 }
+            }else if t.transactionState == .restored {
+                givePremiumQuotes()
+                SKPaymentQueue.default().finishTransaction(t)
+                navigationItem.setRightBarButton(nil, animated: true)
+                
             }
         }
     }
     func givePremiumQuotes() {
+        UserDefaults.standard.setValue(true, forKey: productID)
         normalQuetes.append(contentsOf: premiumQuetes)
         tableView.reloadData()
     }
